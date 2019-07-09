@@ -9,9 +9,9 @@ from django.urls import reverse
 from .forms import ReservationForm
 
 
-# 숙소 생성(관리자) 페이지
+# 룸 생성(관리자) 페이지
 @login_required
-def stay_create(request):
+def room_create(request):
     ImageFormSet = modelformset_factory(Image, form=ImageForm, extra=3)
     if request.method == "POST":
         stay_form = StayForm(request.POST, request.FILES)

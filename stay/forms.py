@@ -26,6 +26,15 @@ class StayForm(forms.ModelForm):
         self.fields['pickup_notice'].label = '픽업안내'
         self.fields['directions'].label = '찾아오시는 길'
 
+class RoomForm(forms.ModelForm):
+    class Meta:
+        model = Room
+        fields = ('stay', 'name', 'hours_available', 'hours_until', 'days_check_in', 'days_check_out', 'days_checkin_possible', 'hours_price', 'days_price', 'check_hours', 'check_days')
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        pass
+
 
 class ImageForm(forms.ModelForm):
     image = forms.ImageField(label='')

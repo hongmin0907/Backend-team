@@ -5,6 +5,6 @@ from .views import *
 app_name = "stay"
 
 urlpatterns = [
-    path("create/", stay_create, name="stay_create"),
+    path("room/create/", room_create, name="room_create"),
     path("", stay_list, name="stay_list"),
 ]
