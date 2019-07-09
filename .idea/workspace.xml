@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="70e95dde-a0db-4536-afbf-259f8b1dc58a" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$USER_HOME$/.PyCharmCE2019.1/system/workspace/backends-team.e281953e.xml" afterDir="false" />
       <change afterPath="$USER_HOME$/.PyCharmCE2019.1/system/workspace/blog_project.7fb314a3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -28,6 +29,106 @@
       <change beforePath="$USER_HOME$/다운로드/pycharm-community-2019.1/helpers/pydev/_pydevd_bundle/pydevd_cython.c" beforeDir="false" />
       <change beforePath="$USER_HOME$/다운로드/pycharm-community-2019.1/helpers/pydev/_pydevd_frame_eval/pydevd_frame_evaluator.c" beforeDir="false" />
       <change beforePath="$USER_HOME$/다운로드/pycharm-community-2019.1/helpers/pydev/pydevd_attach_to_process/linux/attach_linux.c" beforeDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/../../ajax_project/config/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ajax_project/layout/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ajax_project/layout/jquery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/templates/blog/post_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/templates/blog/post_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/templates/blog/post_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/templates/blog/post_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/templates/blog/post_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/templates/blog/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/templatetags/blog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/blog/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/django.cert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/django.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../blog_project_SJK/layout/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/comment/comment_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/comment/comment_single.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/comment/comment_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/comment_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/document_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/document_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/document_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/document_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/templates/board/document_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/board/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/layout/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../board_project/s3_upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bookmark_project/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../bookmark_project/runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../crawler_example/assignment_movie_rank.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../custom_user_project/account/backends.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../custom_user_project/config/s3media.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/templates/accounts/follower_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/templates/accounts/following_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/templates/accounts/signup.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/templates/accounts/signup_complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/templates/accounts/user_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../dstagram_project/runtime.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../editor_project/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../editor_project/post/templates/post/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../editor_project/post/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../multi_database/config/master_slave_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../multi_database/config/user_router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/layout/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/category_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/category_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/category_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/category_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/category_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/comment/comment_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/comment/comment_single.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/comment/comment_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/comment_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/program/program_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/.ebextensions/django.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/accounts/api_urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/accounts/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/api_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/config/asset_storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/config/urls_api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/layout/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/photo/api_urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/photo/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/photo/templates/photo/photo_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/photo/templates/photo/photo_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../python_api/photo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bookmark_project/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../bookmark_project/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bookmark_project/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../bookmark_project/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../bookmark_project/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../bookmark_project/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../crawler_example/example01_naver_search_keyword.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../crawler_example/example01_naver_search_keyword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../crawler_example/example_daum_stock_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../crawler_example/example_daum_stock_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/accounts/templates/accounts/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/templates/accounts/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/config/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/migrations/0002_auto_20190501_0504.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/templates/photo/photo_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/templates/photo/photo_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/templates/photo/photo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/templates/photo/photo_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/templates/photo/photo_slist.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/templates/photo/photo_saved.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> ce32942a69f4f974be2171caa14c3de42ec93ff9
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +141,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stay/models.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1755">
               <caret line="127" column="15" selection-start-line="127" selection-start-column="15" selection-end-line="127" selection-end-column="15" />
+=======
+            <state relative-caret-position="-2511">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+>>>>>>> ce32942a69f4f974be2171caa14c3de42ec93ff9
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -49,6 +155,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stay/admin.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,6 +164,18 @@
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="134" column="1" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
+>>>>>>> ce32942a69f4f974be2171caa14c3de42ec93ff9
             </state>
           </provider>
         </entry>
@@ -66,17 +185,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stay/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -256,7 +364,11 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38166896" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.15563299" />
+>>>>>>> ce32942a69f4f974be2171caa14c3de42ec93ff9
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -353,6 +465,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/settings.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="84">
           <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
         </state>
@@ -362,12 +475,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+=======
+        <state relative-caret-position="399">
+          <caret line="134" column="1" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stay/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2511">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+>>>>>>> ce32942a69f4f974be2171caa14c3de42ec93ff9
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/stay/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1755">
@@ -377,6 +502,10 @@
           </folding>
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> ce32942a69f4f974be2171caa14c3de42ec93ff9
     </entry>
   </component>
 </project>
