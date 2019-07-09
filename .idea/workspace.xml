@@ -63,14 +63,7 @@
       <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/category/comment_list.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/templates/program/program_list.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../fastercampus_project/program/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layout/stay_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stay/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stay/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stay/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stay/templates/stay/stay_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stay/templates/stay/stay_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stay/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stay/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../python_api/.ebextensions/django.config" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../python_api/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../python_api/accounts/api_urls.py" afterDir="false" />
@@ -105,6 +98,8 @@
       <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/templates/photo/photo_slist.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/templates/photo/photo_saved.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../dstagram_project/photo/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../dstagram_project/photo/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stay/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="-2511">
               <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -127,10 +122,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
+            <state relative-caret-position="399">
+              <caret line="134" column="1" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -138,17 +138,6 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/accounts/views.py">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stay/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -228,7 +217,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -366,7 +355,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.1823461" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.15563299" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -468,9 +457,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="134" column="1" lean-forward="true" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stay/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="-2511">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
@@ -478,12 +474,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="111" column="12" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="12" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
