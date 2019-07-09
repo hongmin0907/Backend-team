@@ -15,5 +15,10 @@ class StayOption(admin.ModelAdmin):
 class ImageOption(admin.ModelAdmin):
     list_display = ['stay', 'image']
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ['staying']
+
+
 admin.site.register(Stay, StayOption)
 admin.site.register(Image, ImageOption)
+admin.site.register(Category)
