@@ -162,7 +162,8 @@ class Comment(models.Model):
     # 대댓글 기능 구현 위해 대댓글 작성할 특정 댓글 선택
     parent_comment_id = models.IntegerField(default=0)
 
-    evaluation_items1 = models.IntegerField(default=5) # 평가항목 별 점수 선택 # 친절도
+    # 평가항목 별 점수 선택
+    evaluation_items1 = models.IntegerField(default=5) # 친절도
     evaluation_items2 = models.IntegerField(default=5) # 청결도
     evaluation_items3 = models.IntegerField(default=5) # 편의성
     evaluation_items4 = models.IntegerField(default=5) # 서비스 만족도
