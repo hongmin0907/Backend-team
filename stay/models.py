@@ -32,7 +32,6 @@ SERVICE_CHOICES = (
 # 숙소 정보 입력할 모델
 class Stay(models.Model):
     # name 앞에 city 이름 붙일 것(ex. '강남', '역삼', '선릉')
-    # 나중에 프론트단에서 카테고리(강남/역삼/삼성/논현 클릭 시,
     # name에서 해당 city 쿼리셋하거나
     # location 위치정보를 이용하여 해당 위치의 숙소 쿼리셋 실시시
 
