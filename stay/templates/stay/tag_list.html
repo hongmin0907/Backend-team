@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Tag List{% endblock %}
+
+{% block content %}
+
+{% load tagging_tags%}
+
+{% tag_cloud_for_model stay.Stay as stay_tags %}
+    {% for tag in stay_tags %}
+        <a href="{% url 'stay:stay_taggedlist' tag.name %}">#{{tag}}</a>
+    {% endfor %}
+
+{% endblock %}

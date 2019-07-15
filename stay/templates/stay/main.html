@@ -1,0 +1,19 @@
+{% block extra_style %}
+<style>
+</style>
+{% endblock %}
+
+{% block contents %}
+<form action="{% url 'stay:stay_list' %}" method="post" class="form-control">
+    {% csrf_token %}
+    <input type="text" name="keywords", placeholder="원하는 키워드로 검색하세요.">
+    <input type="submit" value="검색">
+</form>
+{% endblock %}
+
+{% block extra_script %}
+<script type="text/javascript">
+$(function() {
+});
+</script>
+{% endblock %}
