@@ -39,8 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'stay',
     'accounts',
+    'search',
     'multiselectfield',
     'django_extensions',
+    'rest_framework',
+    # swagger UI 제공
+    'rest_framework_swagger',
+    # 토큰 제공
+    'rest_framework.authtoken',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -107,15 +114,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-KR'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -132,4 +139,27 @@ AUTH_USER_MODEL = 'accounts.User'
 GRAPH_MODELS = {
     'all_applications' : True,
     'group_models': True,
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':(
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+    'DEFAULT_FILTER_BACKENDS':(
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+    )
+}
+
+SWAGGER_SETTINGS={
+    'SECURITY_DEFINITIONS':{
+        "api_key":{
+            "type":"apiKey",
+            "name":"Authorization",
+            "in":"header"
+        }
+    }
 }
