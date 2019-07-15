@@ -1,4 +1,3 @@
-from django.db import models
 
 from django.contrib.auth import get_user_model
 
@@ -77,7 +76,6 @@ class Stay(models.Model):
 
     # 찜하기
     like = models.ManyToManyField(get_user_model(), blank=True, related_name="like_stay")
-
 
     # 임시 tag
     searchTag = models.CharField(max_length=50, blank=True)

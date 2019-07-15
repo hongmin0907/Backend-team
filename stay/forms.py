@@ -60,4 +60,3 @@ class ReservationForm(forms.ModelForm):
         model = Reservation
         fields= ('booker', 'phoneNumber', 'wayToGo')
 
-
