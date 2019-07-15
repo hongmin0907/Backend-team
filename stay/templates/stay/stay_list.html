@@ -14,18 +14,18 @@ b {
 <div>
     <ul>
         <li><b>숙소명</b> {{object.name}}</li>
-        <li><b>ID</b> {{object.username}}</li>
+        <li><b>유저 아이디</b> {{object.username}}</li>
         <li><b>위치</b> {{object.location}}</li>
-        <li><b>인기 검색어</b>{% if object.check_franchise %}#프랜차이즈 &nbsp{% if object.check_new_or_remodeling %}#신축/리모델링{% endif %}</li>
+        <li><b>인기 검색어</b>{% if object.checkFranchise %}#프랜차이즈 &nbsp{% if object.checkNewOrRemodeling %}#신축/리모델링{% endif %}</li>
         {% endif %}
         <li><b>숙소 소개</b> {{object.introduce}}</li>
-        <li><b>편의시설 및 서비스</b>{{object.service_kinds}}</li>
-        <li><b>서비스 소개</b> {{object.service_introduce}}</li>
-        <li><b>이용안내</b> {{object.service_notice}}</li>
-        <li><b>픽업안내</b> {{object.pickup_notice}}</li>
+        <li><b>편의시설 및 서비스</b>{{object.serviceKinds}}</li>
+        <li><b>서비스 소개</b> {{object.serviceIntroduce}}</li>
+        <li><b>이용안내</b> {{object.serviceNotice}}</li>
+        <li><b>픽업안내</b> {{object.pickupNotice}}</li>
         <li><b>찾아오시는 길</b> {{object.directions}}</li>
         <li>
-            {% for image in object.images_stay.all %}
+            {% for image in object.rooms.images_room.all %}
                 <img style="height:150px;"src="{{image.image.url}}">
             {% endfor %}
         </li>
