@@ -29,7 +29,7 @@ def stay_create(request):
 # 숙소 목록 페이지
 def stay_list(request):
     # 사용자가 메인 페이지의 검색 기능 사용 시,
-    if request.GET.get('mainSearch'):
+    if request.GET.get('mainSearch', request.POST.get('mainSearch', None)):
         # 프론트단으로부터 검색 키워드를 'searchKeyword'라는 변수로 받는다.
         keyword = request.GET.get('searchKeyword', None)
         # 사용자가 입력한 키워드에 해당하는 숙소 객체 선별
