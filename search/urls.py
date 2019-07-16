@@ -1,6 +1,10 @@
-from django.urls import path
+from django.urls import path, include
 from . import apis
 
+urlpatterns_api = [
+    path('test/', apis.SearchListApi.as_view()),
+]
+
 urlpatterns = [
-    path('test/', apis.SearchList.as_view()),
+    path('api/', include(urlpatterns_api)),
 ]
