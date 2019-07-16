@@ -94,7 +94,7 @@ class Stay(models.Model):
 class Room(models.Model):
     # 숙소 선택(호텔, 모텔, 펜션 외)
     stay = models.ForeignKey(Stay, on_delete=models.CASCADE, related_name="rooms")
-    # 룸 이름
+    # 룸
     name = models.CharField(max_length=50)
 
     # 누가 어느 방을 예약했는지 확인
@@ -115,7 +115,7 @@ class Room(models.Model):
     # 기준 인원
     standardPersonnel = models.IntegerField()
     # 최대 인원
-    MaximumPersonnel = models.IntegerField()
+    maximumPersonnel = models.IntegerField()
     # 대실 예약가
     hoursPrice = models.CharField(max_length=50, blank=True)
     # 숙박 예약가
