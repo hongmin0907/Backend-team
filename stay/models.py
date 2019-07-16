@@ -1,4 +1,4 @@
-
+from django.db import models
 from django.contrib.auth import get_user_model
 
 from multiselectfield import MultiSelectField
@@ -94,7 +94,7 @@ class Stay(models.Model):
 class Room(models.Model):
     # 숙소 선택(호텔, 모텔, 펜션 외)
     stay = models.ForeignKey(Stay, on_delete=models.CASCADE, related_name="rooms")
-    # 룸 이름
+    # 룸
     name = models.CharField(max_length=50)
 
     # 누가 어느 방을 예약했는지 확인
@@ -112,6 +112,10 @@ class Room(models.Model):
     # 룸마다 가능한 체크인/체크아웃 시간 설정
     # views.py에서 특정 유저가 해당 룸 예약 시, 그 체크인/체크아웃 시간대는 다른 유저가 사용하지 못하도록 진행 필요
 
+    # 기준 인원
+    standardPersonnel = models.IntegerField()
+    # 최대 인원
+    maximumPersonnel = models.IntegerField()
     # 대실 예약가
     hoursPrice = models.CharField(max_length=50, blank=True)
     # 숙박 예약가
