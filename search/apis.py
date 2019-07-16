@@ -55,7 +55,7 @@ from .serializers import SearchSerializer, StaySerializer
 #                     return Response(serializer.data)
 #         return Response(serializers.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class SearchList(APIView):
+class SearchListApi(APIView):
     def get(self, request, *args, **kwargs):
         receive_from_client = {
             'searchKey': '역삼',
