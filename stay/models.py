@@ -219,7 +219,6 @@ class Reservation(models.Model):
     # 대실일 경우, views.py에서 해당 룸의 대실시간 고려하여 checkOut 시간 자동 저장
     checkOut = models.DateTimeField(blank=True, null=True)
 
-
     # 로그인한 유저아이디
     username = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name="reservations")
 
