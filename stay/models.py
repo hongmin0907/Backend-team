@@ -5,11 +5,13 @@ from multiselectfield import MultiSelectField
 
 from datetime import date, datetime, timedelta
 
+
 class Category(models.Model):
     staying = models.CharField(max_length=50)  # 모텔, 호텔/리조트, 펜션/풀빌라, 게스트하우스
 
     def __str__(self):
         return self.staying
+
 
 # 편의시설 및 서비스 항목들(multi select)
 SERVICE_CHOICES = (
@@ -30,6 +32,7 @@ SERVICE_CHOICES = (
     (15, '바베큐'),
     (16, '족구장'),
 )
+
 
 # 숙소 정보 입력할 모델
 class Stay(models.Model):
@@ -90,6 +93,7 @@ class Stay(models.Model):
     def __str__(self):
         return f"{self.category} - {self.name}"
 
+
 # room --> 멀티 이미지 구현 필요
 class Room(models.Model):
     # 숙소 선택(호텔, 모텔, 펜션 외)
@@ -144,6 +148,7 @@ class Room(models.Model):
     def __str__(self):
         return f"{self.stay} - {self.name}"
 
+
 # 이미지 정보 저장할 모델 (숙소 이미지 사진들)
 class Image(models.Model):
     # 특정 숙소의 룸 사진들 정보 저장
@@ -155,12 +160,14 @@ class Image(models.Model):
     def __str__(self):
         return f"{self.room.name} image"
 
+
 # 댓글 저장할 모델
 class Comment(models.Model):
     # 특정 숙소에 대한 댓글 저장
     stay = models.ForeignKey(Stay, on_delete=models.CASCADE, related_name='comments')
     # 로그인한 유저
-    username = models.ForeignKey(get_user_model(), on_delete=models.SET_NULL, null=True, blank=True, related_name="comments")
+    username = models.ForeignKey(get_user_model(), on_delete=models.SET_NULL, null=True, blank=True,
+                                 related_name="comments")
     # 댓글 내용
     text = models.TextField(default="")
     # 댓글 작성 시, 자동으로 댓글 작성한 날짜 저장
@@ -171,13 +178,14 @@ class Comment(models.Model):
     parentComment = models.ForeignKey("self", on_delete=models.CASCADE, default="")
 
     # 평가항목 별 점수 선택
-    evaluationItems1 = models.IntegerField(default=5) # 친절도
-    evaluationItems2 = models.IntegerField(default=5) # 청결도
-    evaluationItems3 = models.IntegerField(default=5) # 편의성
-    evaluationItems4 = models.IntegerField(default=5) # 서비스 만족도
+    evaluationItems1 = models.IntegerField(default=5)  # 친절도
+    evaluationItems2 = models.IntegerField(default=5)  # 청결도
+    evaluationItems3 = models.IntegerField(default=5)  # 편의성
+    evaluationItems4 = models.IntegerField(default=5)  # 서비스 만족도
 
     def __str__(self):
         return f"{self.username}님의 댓글"
+
 
 class CheckInOut(models.Model):
     stay = models.ForeignKey(Stay, on_delete=models.SET_NULL, null=True, blank=True, related_name="checkinout")
@@ -192,12 +200,15 @@ class CheckInOut(models.Model):
 
     def __str__(self):
         return f"{self.room} - {self.checkIn.strftime('%Y-%m-%d %H시')} to {self.checkOut.strftime('%Y-%m-%d %H시')}"
+
+
 # 유저가 예약할 때 필요한 정보 저장
 class Reservation(models.Model):
     # 예약할 룸
     room = models.ForeignKey(Room, on_delete=models.SET_NULL, null=True, blank=True, related_name="reservations")
     # 룸 상세 페이지에서 선택한 체크인, 체크아웃 시간
-    checkInOut = models.ForeignKey(CheckInOut, on_delete=models.SET_NULL, null=True, blank=True, related_name="reservations")
+    checkInOut = models.ForeignKey(CheckInOut, on_delete=models.SET_NULL, null=True, blank=True,
+                                   related_name="reservations")
     # 로그인한 유저아이디
     username = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name="reservations")
     # 예약자 이름(views.py에서 default로 유저 이름 자동 설정) --> 변경 가능
