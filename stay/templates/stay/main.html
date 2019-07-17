@@ -6,7 +6,11 @@
 {% block contents %}
 <form action="{% url 'stay:stay_list' %}" method="post" class="form-control">
     {% csrf_token %}
-    <input type="text" name="keywords", placeholder="원하는 키워드로 검색하세요.">
+    숙소 종류<input type="text" name="category", placeholder="모텔, 호텔/리조트, 펜션/풀빌라, 게스트하우스 중 1 택"><br>
+    검색키워드<input type="text" name="searchKeyword"><br>
+    인원수<input type="text" name="personnel"><br>
+    체크인<input type="datetime-local", name="requestCheckIn"><br>
+    체크아웃<input type="datetime-local", name="requestCheckOut"><br>
     <input type="submit" value="검색">
 </form>
 {% endblock %}

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # 토큰 제공
     'rest_framework.authtoken',
     'django_filters',
+    'taggit',
 ]
 
 MIDDLEWARE = [
