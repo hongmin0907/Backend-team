@@ -30,38 +30,44 @@ def stay_create(request):
 def stay_list(request):
     # 사용자가 메인 페이지의 검색 기능 사용 시,
     if request.GET.get('mainSearch', request.POST.get('mainSearch', None)):
+        # ---------메인페이지 검색페이지에서 사용자가 키워드 입력한 경우 해당 숙소 필터링하는 코드---------
+        # !! 키워드 검색 방법 보류(Search app 삭제 예정) !!
         # 프론트단으로부터 검색 키워드를 'searchKeyword'라는 변수로 받는다.
         keyword = request.GET.get('searchKeyword', None)
         # 사용자가 입력한 키워드에 해당하는 숙소 객체 선별
         search = Search.objects.filter(searchKey=keyword)
         if search.exists():
-            # stays 는 queryset 타입
+            # stays -> queryset type
             stays = search.stays.all()
+        # !! search가 존재하지 않을 경우도 추가해줘야 한다. !!
 
+        # ---------메인페이지 검색페이지에서 사용자가 총 인원수(성인+아동) 설정한 경우 해당 숙소 필터링하는 코드---------
         # 프론트단으로부터 총 인원 수를 'personnel'이라는 변수(int type)로 받는다.
         personnel = request.GET.get('personnel', None)
         # 사용자가 설정한 인원수를 수용할 수 있는 숙소 객체 선별
         stays = stays.filter(rooms__maximumPersonnel__gte=personnel).distinct()
         # !!stays.exists() 필요없도록 프론트단에서 반드시 personnel 데이터 받을 것
 
+        # ---------메인페이지 검색페이지에서 사용자가 체크인/체크아웃 설정한 경우 해당 숙소 필터링하는 코드---------
         # !!협의 필요!!
+        # 체크인/체크아웃 데이터 받는 방법
         # 방법1) 프론트단으로부터 사용자의 체크인/체크아웃 데이터를 받는다.(가급적 datetime 타입으로 받을 것 - 시간은 체크인 22시, 체크아웃 11시)
-        # --> str형태라면, str = '2019-07-01'이라면,
-        # --> str -> datetime 변환 방법1) datetime.strptime(str+' 00:00:00', '%Y-%m-%d %H:%M:%S')
-        # --> 00:00:00 부분에 체크인 시간은 22:00:00, 체크아웃 시간은 11:00:00 로 설정할 것
-        # --> str -> datetime 변환 방법2)datetime(2019, 7), 1, 0, 0, 0)
+        #       str형태라면, str = '2019-07-01'이라면,
+        #       str -> datetime 변환 방법1) datetime.strptime(str+' 00:00:00', '%Y-%m-%d %H:%M:%S')
+        #       00:00:00 부분에 체크인 시간은 22:00:00, 체크아웃 시간은 11:00:00 로 설정할 것
+        #       str -> datetime 변환 방법2)datetime(2019, 7), 1, 0, 0, 0)
         # 방법2) 백단에서 checkInOut form 을 이용하여 데이터 입력 받는다.
         requestCheckIn = request.GET.get('requestCheckIn', None)
         requestCheckOut = request.GET.get('requestCheckOut', None)
         # 사용자가 요청한 체크인/체크아웃 시간에 예약 가능한 숙소 객체 선별
         finalStays = []
-        # # !!성능 저하 우려!! -> 개선 방법 모색
+        # # !! 이중 for문 -> 성능 저하 우려 -> 개선 방법 모색 !!
         for stay in stays:
             rooms = stay.rooms.all()
             for room in rooms:
-                roomCheckInOut = room.checkinout.all()
+                roomReservation = room.reservations.all()
                 # 사용자가 요청한 체크인아웃 시간에 예약가능한 룸 --> 룸의 전체 checkInOut 객체수 == 사용자가 요청한 체크인/체크아웃시간과 겹치지 않는 룸의 checkInOut 객체 수
-                if roomCheckInOut.count() == roomCheckInOut.filter\
+                if roomReservation.count() == roomReservation.filter\
                             (Q(checkIn__gte=requestCheckOut) \
                                | Q(checkOut__lte=requestCheckIn)).count():
                     # 예약가능한 룸의 숙소 객체를 stay 변수에 저장
@@ -69,36 +75,16 @@ def stay_list(request):
                     # finalObjects에 해당 숙소 객체 없다면 추가(숙소 객체 중복 방지)
                     if stay not in finalStays:
                         finalStays.append(stay)
-        # list 를 queryset 형태로 바꾸고 싶은 경우
+        # list 를 queryset 형태로 변경하고 싶은 경우
         finalStays = Stay.objects.filter(id__in=[object.id for object in finalStays])
 
         return render(request, 'stay/stay_list.html', {'objects': finalStays})
 
+    # 지역별(ex. 서울 -> 강남/역삼/선릉/삼성) 검색할 때 해당 숙소 필터링하는 코드
+    # !! 검토 이후, 구현 예정 !!
     stays = Stay.objects.all()
 
     return render(request, 'stay/stay_list.html', {'objects':stays})
-# from rest_framework.views import APIView
-# from rest_framework.response import Response
-# from rest_framework import serializers
-# from rest_framework import status
-# class StaySearch(APIView):
-#     def post(self, request, format=None):
-#         keywords = request.POST.get('keywords',None)
-#         print(keywords)
-#
-#         if keywords is not None:
-#             keywords = keywords.split(',')
-#
-#             stays = models.Stay.objects.filter(keywords__name__in=keywords).distinct()
-#             return render(request, 'stay/stay_list.html', {'objects':stays})
-#             serializer = serializers.CountStaySerializer(stays, many=True)
-#             return Response(data=serializer.data, status=status.HTTP_200_OK)
-#         else:
-#             stays = models.Stay.objects.all()
-#             serializer = serializers.CountStaySerializer(stays, many=True)
-#             return Response(data=serializer.data, status=status.HTTP_200_OK)
-#             return Response(status=status.HTTP_400_BAD_REQEUST)
-
 
 
 # 룸 생성 페이지
