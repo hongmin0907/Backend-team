@@ -39,14 +39,6 @@ class ImageForm(forms.ModelForm):
         model = Image
         fields = ('image',)
 
-from django import forms
-
-from accounts.models import User
-
-# 룸 상세 페이지에서 checkInOutForm 먼저 띄우고, 저장받아서 예약 페이지에 보여줌
-class CheckInOutForm(forms.Form):
-    class Meta:
-        fields = ('checkIn', 'checkOut',)
 
 # 예약 폼(클라이언트)
 class ReservationForm(forms.ModelForm):
@@ -58,5 +50,5 @@ class ReservationForm(forms.ModelForm):
 
     class Meta:
         model = Reservation
-        fields= ('booker', 'phoneNumber', 'wayToGo')
+        fields= ('checkIn', 'checkOut', 'booker', 'phoneNumber', 'wayToGo')
 

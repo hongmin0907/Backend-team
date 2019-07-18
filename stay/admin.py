@@ -29,10 +29,7 @@ class ImageOption(admin.ModelAdmin):
     list_display = ['stay', 'room','image']
 
 class ReservationOption(admin.ModelAdmin):
-    list_display = ['username', 'booker', 'phoneNumber']
-
-class CheckInOutOption(admin.ModelAdmin):
-    list_display = ['stay', 'room', 'username', 'checkIn', 'checkOut']
+    list_display = ['username', 'stay', 'room', 'checkIn', 'checkOut', 'booker', 'phoneNumber']
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['staying']
@@ -42,4 +39,3 @@ admin.site.register(Stay, StayOption)
 admin.site.register(Image, ImageOption)
 admin.site.register(Room, RoomOption)
 admin.site.register(Reservation, ReservationOption)
-admin.site.register(CheckInOut, CheckInOutOption)
