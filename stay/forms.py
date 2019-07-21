@@ -6,21 +6,24 @@ from .models import *
 class StayForm(forms.ModelForm):
     class Meta:
         model = Stay
-        fields = ('name', 'location', 'introduce',
+        fields = ('category','name', 'location', 'keywords', 'introduce',
                   'builtDate', 'remodeledDate', 'serviceKinds',
                   'serviceIntroduce', 'serviceNotice', 'pickupNotice', 'directions')
 
     def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', '')
         super().__init__(*args, **kwargs)
+        self.fields['category'] = forms.ModelChoiceField(queryset=Category.objects.all())
         self.fields['name'].label = '상호명'
         self.fields['location'].label = '위치'
+        self.fields['keywords'].label = '검색 키워드'
         self.fields['introduce'].label = '숙소 소개'
         self.fields['builtDate'].label = '완공 일자'
         self.fields['remodeledDate'].label = '리모델링 일자'
         self.fields['serviceKinds'].label = '편의시설 및 서비스 선택'
         self.fields['serviceIntroduce'].label = '편의시설 및 서비스 소개'
-        self.fields['serviceNotice'].label = '이용안내'
-        self.fields['pickupNotice'].label = '픽업안내'
+        self.fields['serviceNotice'].label = '이용 안내'
+        self.fields['pickupNotice'].label = '픽업 안내'
         self.fields['directions'].label = '찾아오시는 길'
 
 class RoomForm(forms.ModelForm):
