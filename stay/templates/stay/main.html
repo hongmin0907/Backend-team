@@ -4,15 +4,38 @@
 {% endblock %}
 
 {% block contents %}
-<form action="{% url 'stay:stay_list' %}" method="post" class="form-control">
+<p><h1>키워드 검색하여 숙소 검색</h1></p>
+<form action="{% url 'stay:stay_list' %}" method="get" class="form-control">
     {% csrf_token %}
-    숙소 종류<input type="text" name="category", placeholder="모텔, 호텔/리조트, 펜션/풀빌라, 게스트하우스 중 1 택"><br>
     검색키워드<input type="text" name="searchKeyword"><br>
     인원수<input type="text" name="personnel"><br>
     체크인<input type="datetime-local", name="requestCheckIn"><br>
     체크아웃<input type="datetime-local", name="requestCheckOut"><br>
     <input type="submit" value="검색">
 </form>
+
+<p><h1>지역 선택하여 숙소 검색</h1></p>
+<form action="{% url 'stay:stay_list' %}" method="get" class="form-control">
+    {% csrf_token %}
+    숙소 종류<input type="text" name="category", placeholder="모텔, 호텔/리조트, 펜션/풀빌라, 게스트하우스 중 1 택"><br>
+    지역명<input type="text" name="selectRegion", placeholder="ex. 강남/역삼/선릉/삼성"><br>
+    인기검색어<input type="text" name="popularKeyword", placeholder="ex. 신축/리모델링"><br>
+    인원수<input type="text" name="personnel"><br>
+    체크인<input type="datetime-local", name="requestCheckIn"><br>
+    체크아웃<input type="datetime-local", name="requestCheckOut"><br>
+    <input type="submit" value="검색">
+</form>
+
+<p><h1>특정위치 지정하여 숙소 검색</h1></p>
+<form action="{% url 'stay:stay_list' %}" method="get" class="form-control">
+    {% csrf_token %}
+    지역명<input type="text" name="currentAddress", placeholder="ex. 서울특별시 강남구 테헤란로2길"><br>
+    인원수<input type="text" name="personnel"><br>
+    체크인<input type="datetime-local", name="requestCheckIn"><br>
+    체크아웃<input type="datetime-local", name="requestCheckOut"><br>
+    <input type="submit" value="검색">
+</form>
+
 {% endblock %}
 
 {% block extra_script %}

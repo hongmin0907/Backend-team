@@ -24,6 +24,11 @@ b {
         <li><b>이용안내</b> {{object.serviceNotice}}</li>
         <li><b>픽업안내</b> {{object.pickupNotice}}</li>
         <li><b>찾아오시는 길</b> {{object.directions}}</li>
+        <li><b>검색키워드</b>
+            {% for keyword in object.keywords.all %}
+                {{keyword}},
+            {% endfor %}
+        </li>
         <li>
             {% for image in object.rooms.images_room.all %}
                 <img style="height:150px;"src="{{image.image.url}}">
