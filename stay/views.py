@@ -35,13 +35,13 @@ def stay_list(request):
     if request.method == "POST":
         # 프론트단으로부터 (모텔, 호텔/리조트, 펜션/풀빌라, 게스트하우스 중 1 택) 정보를 category라는 문자열 형태의 변수로 받는다.
         category_str = request.POST.get('category', None)
-        category_object = Category.objects.get(staying=category_str)
+        category_obj = Category.objects.get(staying=category_str)
         # 특정 category에 해당하는 숙소 필터링
-        stays = Stay.objects.filter(category=category_object)
+        stays = Stay.objects.filter(category=category_obj)
 
         # ---------메인페이지 검색페이지에서 사용자가 키워드 입력한 경우 해당 숙소 필터링하는 코드---------
         # 프론트단으로부터 검색 키워드를 'searchKeyword'라는 문자열 형태의 변수로 받는다.
-        # ex) "강남/역삼/선릉/삼성", "서울 송파구 올림픽대로", "역삼 마레", "역삼" ...
+        # ex) searchKeyword = "강남/역삼/선릉/삼성" or "서울 송파구 올림픽대로" or "역삼 마레" or "#프렌차이즈" ...
         search_keyword = request.POST.get('searchKeyword', None)
         # 사용자가 입력한 키워드에 해당하는 숙소 객체 선별
         if search_keyword is not None:
@@ -91,6 +91,12 @@ def stay_list(request):
             # 방법2) 백단에서 checkInOut form 을 이용하여 데이터 입력 받는다.
             requestCheckIn = request.POST.get('requestCheckIn', None)
             requestCheckOut = request.POST.get('requestCheckOut', None)
+
+            # 사용자가 요청한 체크아웃 시간이 체크인 시간보다 앞서 있을 때,
+            # searchResult를 False 값으로 설정하여 전송
+            if requestCheckOut < requestCheckIn:
+                return JsonResponse({'searchResult':False})
+
             # 사용자가 요청한 체크인/체크아웃 시간에 예약 가능한 숙소 객체 선별
             finalStays = []
             # # !! 이중 for문 -> 성능 저하 우려 -> 개선 방법 모색 !!
@@ -116,6 +122,17 @@ def stay_list(request):
         stays = Stay.objects.all()
         return render(request, 'stay/stay_list.html', {'objects':stays})
 
+@login_required
+def stay_detail(request, stay_id):
+    pass
+
+@login_required
+def stay_update(request, stay_id):
+    pass
+
+@login_required
+def stay_delete(request, stay_id):
+    pass
 
 # 룸 생성 페이지
 @login_required
@@ -163,3 +180,4 @@ def reservation_create(reqeust, room_id):
 
 
 
+# 마이페이지 구현할
