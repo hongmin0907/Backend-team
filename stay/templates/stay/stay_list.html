@@ -1,0 +1,40 @@
+{% extends 'stay_base.html' %}
+
+{% block extra_style %}
+<style>
+b {
+    font-size: 18px;
+    margin-right: 30px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% for object in objects %}
+<div>
+    <ul>
+        <li><b>숙소명</b> {{object.name}}</li>
+        <li><b>유저 아이디</b> {{object.username}}</li>
+        <li><b>위치</b> {{object.location}}</li>
+        <li><b>인기 검색어</b>{% if object.checkFranchise %}#프랜차이즈 &nbsp{% if object.checkNewOrRemodeling %}#신축/리모델링{% endif %}</li>
+        {% endif %}
+        <li><b>숙소 소개</b> {{object.introduce}}</li>
+        <li><b>편의시설 및 서비스</b>{{object.serviceKinds}}</li>
+        <li><b>서비스 소개</b> {{object.serviceIntroduce}}</li>
+        <li><b>이용안내</b> {{object.serviceNotice}}</li>
+        <li><b>픽업안내</b> {{object.pickupNotice}}</li>
+        <li><b>찾아오시는 길</b> {{object.directions}}</li>
+        <li><b>검색키워드</b>
+            {% for keyword in object.keywords.all %}
+                {{keyword}},
+            {% endfor %}
+        </li>
+        <li>
+            {% for image in object.rooms.images_room.all %}
+                <img style="height:150px;"src="{{image.image.url}}">
+            {% endfor %}
+        </li>
+    </ul>
+</div>
+{% endfor %}
+{% endblock %}
