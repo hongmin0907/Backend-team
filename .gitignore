@@ -390,3 +390,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/git,linux,macos,python,django,windows,database,pycharm+all,visualstudiocode,jupyternotebooks
+
+secret.py
