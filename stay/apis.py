@@ -1,23 +1,26 @@
-from rest_framework.views import APIView
+from rest_framework import generics
 from rest_framework.response import Response
-from .serializers import *
+from rest_framework.permissions import AllowAny
+
+from .serializers import StaySerializer, RoomSerializer, CategorySerializer
+from .models import *
+
 
 # 숙소 리스트
-class StayListApi(APIView):
-    def get(self, request, *args, **kwargs):
-        stays = Stay.objects.all()
-        serializer = serializers(stays, many=True)
-        return Response(serializer.data)
+class StayListApi(generics.ListAPIView):
+    model = Stay.objects.all()
+    serializer_class = StaySerializer
+    # permission_classes = [AllowAny, ]
+
+
 # 한 숙소 안에 모든 룸 리스트
-class RoomListApi(APIView):
-    def post(self, request, *args, **kwargs):
-        stay = request.POST.get('stayId')
-        rooms = Room.objects.filter(stay=stay)
-        serializer = serializers(rooms, many=True)
-        return Response(serializers.data)
+class RoomListApi(generics.ListAPIView):
+    model = Room.objects.all()
+    serializer_class = RoomSerializer
+    # permission_classes = [AllowAny, ]
+
 # 카테고리 리스트
-class CategoryListApi(APIView):
-    def get(self, request, *args, **kwargs):
-        category = Category.obejcts.all()
-        serializer = serializers(category, many=True)
-        return Response(serializers.data)
+class CategoryListApi(generics.ListAPIView):
+    model = Category.objects.all()
+    serializer_class = CategorySerializer
+    # permission_classes = [AllowAny, ]
