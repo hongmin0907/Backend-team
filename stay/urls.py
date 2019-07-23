@@ -8,6 +8,8 @@ urlpatterns_apis = [
     path('category/', CategoryListApi.as_view()),
     path('stay/', StayListApi.as_view()),
     path('room/', RoomListApi.as_view()),
+    path('testcategory/', MainSearchListApi.as_view()),
+    path('testmain/', mainPageApi.as_view()),
 ]
 
 urlpatterns = [

@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'drf_yasg',
     'corsheaders',
+    'taggit'
 ]
 
 MIDDLEWARE = [
@@ -82,14 +83,21 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': db_info['name'],
+#         'USER': db_info['username'],
+#         'PASSWORD': db_info['password'],
+#         'HOST':'yanolja-db.cqspib6zzip8.ap-northeast-2.rds.amazonaws.com',
+#         'PORT':'5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': db_info['name'],
-        'USER': db_info['username'],
-        'PASSWORD': db_info['password'],
-        'HOST':'yanolja-db.cqspib6zzip8.ap-northeast-2.rds.amazonaws.com',
-        'PORT':'5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -153,7 +161,11 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS':(
         'django_filters.rest_framework.DjangoFilterBackend',
         'rest_framework.filters.SearchFilter',
-    )
+    ),
+    'DEFAULT_PAGINATION_CLASS':
+        'rest_framework.pagination.LimitOffsetPagination',
+        'PAGE_SIZE': 10
+    ,
 }
 
 SWAGGER_SETTINGS={

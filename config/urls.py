@@ -34,7 +34,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('stay/', include('stay.urls')),
     path('api/get_token/', obtain_auth_token),
-    path('search/',include('search.urls')),
+    # path('search/',include('search.urls')),
 
     url(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     url(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

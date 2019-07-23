@@ -13,7 +13,7 @@ class CommentInline(admin.TabularInline):
     model = Comment
 
 class StayOption(admin.ModelAdmin):
-    list_display = ['name', 'location','username']
+    list_display = ['name', 'location','keywords']
     ordering = ['location']
     inlines = [ImageInline]
     inlines = [CommentInline]
